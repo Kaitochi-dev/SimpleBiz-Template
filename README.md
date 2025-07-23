@@ -16,6 +16,6 @@ This template is perfect for small businesses, products, or personal projects. I
 3. Customize colors, text, and images by editing `style.css` and replacing images in the `img` folder.
 
 ## 💬 Need Help?
-If you're new to HTML/CSS, you can search free tutorials online, or reach out to me via [kaitoiykenetuonu@gmail.com].
+If you're new to HTML/CSS, you can search free tutorials online, or reach out to me via [kaitoiykemetuonu@gmail.com].
 
 Enjoy building your website!
