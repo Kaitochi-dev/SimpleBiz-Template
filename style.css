@@ -1,0 +1,213 @@
+/* Reset and Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Layout Wrapper */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #0056b3;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Footer */
+.footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+button,
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Forms */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  header,
+  footer {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+  /* Container */
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Slide setup */
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  transform: translateX(0);
+  position: relative;
+}
+
+/* Arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 12px;
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 4px;
+  user-select: none;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Dots */
+.dots-container {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+@media screen and (max-width: 768px) {
+  .slideshow-container {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .prev, .next {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .prev, .next {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .dots-container {
+    margin-top: 10px;
+  }

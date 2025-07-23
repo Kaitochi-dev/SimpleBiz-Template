@@ -1,0 +1,107 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <title>Home - My Business Website Template</title>
+  <link rel="stylesheet" href="style.css">
+</head>  
+<body>  
+  <!-- Simple website template. Customize as needed. -->  
+      <!--Replace Company Name with your company's name and logo.jpg with your conpany's logo url-->
+<header>Company Name<img src="logo.jpg"></header>
+  <div class="homepage">  
+    <h1 class="s1" id="section1">My Business Website</h1>  
+    
+    <!-- Slideshow Section -->
+<div class="slideshow-container">
+
+  <div class="slide">
+    <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
+  </div>
+
+  <div class="slide">
+    <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+  </div>
+
+  <div class="slide">
+    <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+  </div>
+</div>
+
+<!-- Dots below the slideshow -->
+<div class="dots-container">
+  <span class="dot" onclick="goToSlide(0)"></span>
+  <span class="dot" onclick="goToSlide(1)"></span>
+  <span class="dot" onclick="goToSlide(2)"></span>
+</div>
+    <hr>  
+    
+    <!-- Navigation Menu -->  
+    <div class="wrapper">
+      <nav class="home2">  
+      <a href='about.html' >
+        About Us&#187;
+      </a><br><hr>  
+
+      <a href="product.html">
+        Products & Services&#187;
+      </a><br><hr>
+      
+      <a href="order.html">Order&#187;</a><br><hr>
+
+      <a href="contact.html">
+        Contact Us&#187;
+      </a><br><hr>  
+    </nav>
+  </div>
+  </div><br>
+  <footer class="footer" id="foot">
+      <p>&copy; 2025 My Business. All rights reserved.</p>
+      <p>Contact: <a href="mailto:email@example.com?subject=Your subject here&body=Your message here...">email@example.com</a></p>
+      <p>Follow us:
+        <a href="#">Facebook</a> |
+        <a href="#">Twitter</a> |
+        <a href="#">Instagram</a>
+        <!--You can add any other contact platform-->
+      </p>
+    </footer>
+    <script>
+let currentSlide = 0;
+const slides = document.getElementsByClassName("slide");
+const dots = document.getElementsByClassName("dot");
+
+function showSlide(index) {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+    dots[i].classList.remove("active");
+    slides[i].style.transform = "translateX(100%)"; // reset position
+  }
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+  slides[index].style.transform = "translateX(0)";
+  currentSlide = index;
+}
+
+function changeSlide(n) {
+  let newIndex = currentSlide + n;
+  if (newIndex >= slides.length) newIndex = 0;
+  if (newIndex < 0) newIndex = slides.length - 1;
+  showSlide(newIndex);
+}
+
+function goToSlide(n) {
+  showSlide(n);
+}
+
+// Auto slide
+setInterval(() => {
+  changeSlide(1);
+}, 4000); // every 4 seconds
+
+// Start the slideshow
+showSlide(0);
+</script>
+</body>  
+</html>
